@@ -104,44 +104,6 @@ Service --> JwtService
 
 ---
 
-# 🔐 Authentication Flow
-
-```mermaid
-sequenceDiagram
-
-actor User
-
-participant AuthController
-
-participant AuthenticationManager
-
-participant UserDetailsService
-
-participant JwtService
-
-participant DB
-
-User->>AuthController: POST /auth/login
-
-AuthController->>AuthenticationManager: authenticate()
-
-AuthenticationManager->>UserDetailsService: loadUserByUsername()
-
-UserDetailsService->>DB: Fetch User
-
-DB-->>UserDetailsService: User
-
-UserDetailsService-->>AuthenticationManager
-
-AuthenticationManager-->>AuthController: Success
-
-AuthController->>JwtService: Generate JWT
-
-JwtService-->>User: Token
-```
-
----
-
 # Security Architecture
 
 ```mermaid
