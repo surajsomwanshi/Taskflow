@@ -102,8 +102,6 @@ JWTFilter --> Controller
 Service --> JwtService
 ```
 
----
-
 # Authentication Flow
 
 ```mermaid
