@@ -4,6 +4,7 @@ import com.codewithsuraj.taskflow.controller.TaskController;
 import com.codewithsuraj.taskflow.entity.Task;
 import com.codewithsuraj.taskflow.exception.TaskNotFoundException;
 import com.codewithsuraj.taskflow.repository.TaskRepository;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
